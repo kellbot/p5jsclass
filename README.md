@@ -3,7 +3,8 @@
 Supplemental material and live examples
 
 ### No Loop Example
-<iframe src="https://editor.p5js.org/kellbot/full/sCHy3Rm_N"></iframe>
+<iframe frameborder="0"style="height: 300px; width: 300px; margin: 0 auto; display: block;" src="https://editor.p5js.org/kellbot/full/sCHy3Rm_N"></iframe>
+
 ```JavaScript
 function setup() {
   createCanvas(400, 400);
