@@ -4,7 +4,7 @@ Supplemental material and live examples
 
 ### Sample Code
 
-```javascript
+```JavaScript
 function setup() {
   createCanvas(400, 400);
   noLoop();
