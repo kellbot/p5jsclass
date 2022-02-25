@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Generative Art with p5.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/league.css">
+		<style>
+			.instruction {
+				font-size: 75%;
+				color: #af8eee;
+			}
+		</style>
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h3>Generative Art with p5.js</h3>
+					<p>
+						<small>An introductory course</a></small>
+					</p>
+				</section>
+				<section>
+					<h2>What is p5.js?</h2>
+					<ul>
+						<li>Based off Processing, a Java library</li>
+						<li>Runs entirely in client-side Javascript</li>
+						<li>Can be extended</li>
+						<li>Can be combined with other Javascript tools / libraries</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Development Environment</h3>
+					<p>https://editor.p5js.org</p>
+
+					<img data-src="https://i.imgur.com/VYvaYSS.png" width="50%" style="float: right; margin-left: 5%;" />
+					<p class="instruction">&nbsp;<br />Create an account on editor.p5js.org in order to save your work.</p>
+					<p class="instruction">Click the pencil icon to give your sketch a meaningful name.</p>
+
+					<p><small>Additional options: openprocessing.org, download from p5js.org and run locally / edit it in the text editor of your choice.</small></p> 
+				</section>
+				<section>
+					<section>
+					<h3>The <code>draw()</code> loop</h3>
+					<div style="display: grid; grid-auto-flow: column;">
+						<div>
+						<pre><code data-trim data-noescape>
+							let yPos = 0;
+							function setup() {
+							  // setup() runs once
+							  frameRate(30);
+							}
+							function draw() {
+							  // draw() loops forever
+							  background(204);
+							  yPos = yPos - 1;
+							  if (yPos < 0) {
+							    yPos = height;
+							  }
+							  line(0, yPos, width, yPos);
+							}</code></pre>
+						</div>
+						<div style="display: grid; grid-auto-flow: column;">
+						<pre><code data-trim data-noescape>
+							function setup() {
+							  createCanvas(400, 400);
+							  noLoop();
+							}
+
+							function draw() {
+							  let bg_r = random(0,255);
+							  let bg_g = random(0,255);
+							  let bg_b = random(0,255);
+							  background(bg_r, bg_g, bg_b ); 
+							}
+
+							function mousePressed(){
+							  redraw();
+							}
+							</code></pre>
+						</div>
+					</div>
+					</section>
+					<section>
+						<div style="display: grid; grid-auto-flow: column;">
+							<div><iframe width="400px" height="400px" src="https://editor.p5js.org/kellbot/full/OBgkvwDgW"></iframe></div>
+							<div><iframe width="400px" height="400px" src="https://editor.p5js.org/kellbot/full/sCHy3Rm_N"></iframe></div>
+					</div>
+					</section>
+				</section>
+				<section data-background="#dddddd">
+					<h3>The coordinate plane</h3>
+					<img data-src="https://p5js.org/assets/learn/coordinate-system-and-shapes/images/drawing-03.svg">
+				</section>
+				<section>
+					<h3>Points, Lines, and Circles</h3>
+					<pre><code>
+						point(x, y);
+						line(x1, y1, x2, y2);
+						circle(x, y, diameter);
+					</code></pre>
+					<iframe style="float:left" src="https://openprocessing.org/sketch/1496739/embed/" width="400" height="400"></iframe>
+					<p style="margin-right:5%" class="instruction">Draw a stick figure using points, lines, and circles</p>
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>

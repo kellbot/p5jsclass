@@ -1,48 +1,66 @@
-## Generative Art with p5.JS
+<p align="center">
+  <a href="https://revealjs.com">
+  <img src="https://hakim-static.s3.amazonaws.com/reveal-js/logo/v1/reveal-black-text-sticker.png" alt="reveal.js" width="500">
+  </a>
+  <br><br>
+  <a href="https://github.com/hakimel/reveal.js/actions"><img src="https://github.com/hakimel/reveal.js/workflows/tests/badge.svg"></a>
+  <a href="https://slides.com/"><img src="https://s3.amazonaws.com/static.slid.es/images/slides-github-banner-320x40.png?1" alt="Slides" width="160" height="20"></a>
+</p>
 
-Supplemental material and live examples
+reveal.js is an open source HTML presentation framework. It enables anyone with a web browser to create beautiful presentations for free. Check out the live demo at [revealjs.com](https://revealjs.com/).
 
-#### Draw Loop Example
+The framework comes with a powerful feature set including [nested slides](https://revealjs.com/vertical-slides/), [Markdown support](https://revealjs.com/markdown/), [Auto-Animate](https://revealjs.com/auto-animate/), [PDF export](https://revealjs.com/pdf-export/), [speaker notes](https://revealjs.com/speaker-view/), [LaTeX typesetting](https://revealjs.com/math/), [syntax highlighted code](https://revealjs.com/code/) and an [extensive API](https://revealjs.com/api/).
 
-<iframe src="https://editor.p5js.org/kellbot/full/OBgkvwDgW"></iframe>
+---
 
-```JavaScript
-nothing displayed
-draw example 0
-let yPos = 0;
-function setup() {
-  // setup() runs once
-  frameRate(30);
-}
-function draw() {
-  // draw() loops forever, until stopped
-  background(204);
-  yPos = yPos - 1;
-  if (yPos < 0) {
-    yPos = height;
-  }
-  line(0, yPos, width, yPos);
-}
-```
+### Sponsors
+Hakim's open source work is supported by <a href="https://github.com/sponsors/hakimel">GitHub sponsors</a>. Special thanks to:
+<div align="center">
+  <table>
+    <td align="center">
+      <a href="https://workos.com/?utm_campaign=github_repo&utm_medium=referral&utm_content=revealjs&utm_source=github">
+        <div>
+          <img src="https://user-images.githubusercontent.com/629429/151508669-efb4c3b3-8fe3-45eb-8e47-e9510b5f0af1.svg" width="290" alt="WorkOS">
+        </div>
+        <b>Your app, enterprise-ready.</b>
+        <div>
+          <sub>Start selling to enterprise customers with just a few lines of code. Add Single Sign-On (and more) in minutes instead of months.</sup>
+        </div>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://www.doppler.com/?utm_cam![Uploading workos-logo-white-bg.svg…]()
+      paign=github_repo&utm_medium=referral&utm_content=revealjs&utm_source=github">
+        <div>
+          <img src="https://user-images.githubusercontent.com/629429/151510865-9fd454f1-fd8c-4df4-b227-a54b87313db4.png" width="290" alt="Doppler">
+        </div>
+        <b>All your environment variables, in one place</b>
+        <div>
+          <sub>Stop struggling with scattered API keys, hacking together home-brewed tools, and avoiding access controls. Keep your team and servers in sync with Doppler.</sup>
+        </div>
+      </a>
+    </td>
+  </table>
+</div>
 
-#### No Loop Example
+---
 
-<iframe frameborder="0" style="height: 500px; width: 500px; margin: 0 auto; display: block;" src="https://editor.p5js.org/kellbot/full/sCHy3Rm_N"></iframe>
+### Getting started
+- 🚀 [Install reveal.js](https://revealjs.com/installation)
+- 👀 [View the demo presentation](https://revealjs.com/demo)
+- 📖 [Read the documentation](https://revealjs.com/markup/)
+- 🖌 [Try the visual editor for reveal.js at Slides.com](https://slides.com/)
+- 🎬 [Watch the reveal.js video course (paid)](https://revealjs.com/course)
 
-```JavaScript
-function setup() {
-  createCanvas(400, 400);
-  noLoop();
-}
+---
 
-function draw() {
-  let bg_r = random(0,255);
-  let bg_g = random(0,255);
-  let bg_b = random(0,255);
-  background(bg_r, bg_g, bg_b ); 
-}
+### Online Editor
+Want to create your presentation using a visual editor? Try the official reveal.js presentation platform for free at [Slides.com](https://slides.com). It's made by the same people behind reveal.js.
 
-function mousePressed(){
-  redraw();
-}
-```
+<br>
+<br>
+
+--- 
+<div align="center">
+  MIT licensed | Copyright © 2011-2022 Hakim El Hattab, https://hakim.se
+</div>
