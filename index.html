@@ -38,6 +38,10 @@
 					</ul>
 				</section>
 				<section>
+					<h3>What is art?</h3>
+					Abstract vs Figurative
+				</section>
+				<section>
 					<h3>Development Environment</h3>
 					<p>https://editor.p5js.org</p>
 
@@ -114,9 +118,9 @@
 						<p style="margin-right:5%" class="instruction">Draw a stick figure using points, lines, and circles</p>
 					</section>
 					<section>
-						<h3>Color</h3>
+						<h3>Color Basics</h3>
 						<p>
-							<code>colorMode(mode, max)</code> - RGB, HSB, HSL <a href="https://editor.p5js.org/kellbot/full/cfVd2WQyQ">demo</a><br />
+							<a href="https://editor.p5js.org/kellbot/full/cfVd2WQyQ">demo</a><br />
 							Single integer, series of 3-4 integers, hex value string, color description string
 						</p>
 						<p><code>fill('#ffcc00')</code></p>
@@ -127,21 +131,47 @@
 						<iframe src="https://openprocessing.org/sketch/1502016/embed/" width="1000" height="600"></iframe>
 					</section>
 					<section>
-						Code samples of various transformations
+						<h4>Translate</h4>
+						<p>move left, right, up down <a href="https://p5js.org/reference/#/p5/translate">docs</a></p>
+						<h4>Rotate</h4><p>turn around the origin point<br />
+						angleMode(DEGREES) <a href="https://p5js.org/reference/#/p5/rotate">docs</a></p>
+						<h4>Scale</h4><p>make it bigger or larger <a href="https://p5js.org/reference/#/p5/scale">docs</a></p>
+						<h4>ShearX / ShearY</h4> <a href="https://p5js.org/reference/#/p5/shearY">docs</a>
 					</section>
 					<section>
 						<h3>More shapes</h3>
-						Rectangle - modes CORNER, CORNERS, CENTER, or RADIUS
+						<p>
+						<a href="https://p5js.org/reference/#/p5/rect">Rectangle</a> - Optional Roundness<br />
+						rectMode() -  CORNER, CORNERS, CENTER, or RADIUS<br>
+						<a href="https://p5js.org/reference/#/p5/arc">Arc</a> - Chord, Pie, Open<br />
+						<a href="https://p5js.org/reference/#/p5/ellipse">Ellipse</a> - A circle, but lopsided!<br />
 
-						circle modes
+						<a href="https://p5js.org/reference/#/p5/ellipseMode">ellipseMode()</a> - CENTER, RADIUS, CORNER, CORNERS
+						</p>
 					</section>
 					<section>
-						Polygons
+						<h3>Polygons</h3>
+						<pre><code data-trim data-noescape>
+							beginShape();
+							vertex(30, 20);
+							vertex(85, 20);
+							vertex(85, 75);
+							vertex(30, 75);
+							endShape(CLOSE);
+						</code></pre>
+						<a href="https://p5js.org/reference/#/p5/beginShape">docs</a>
+
 					</section>
 					<section>
-						<h3>Helpers</h3>
-						int()
-						random()
+						<h3>Working with Numbers</h3>
+						<h4><a href="https://p5js.org/reference/#/p5/random">random()</a></h4>
+						<ul>
+							<li><pre>random() - a floating point number between 0 and 1</pre></li>
+							<li><pre>random(i) - a floating point number between 0 and i</pre></li>
+							<li><pre>random(i,j) - a floating point number between i and j</pre></li>
+							<li><pre>random([a, b, c]) - a, b, or c (randomly)</pre></li>
+						</ul>
+						<pre><code>int() ceil() floor() width height displayWidth displayHeight</code></pre> 
 					</section>
 					<section>
 						<h3>Create random geometry</h3>
@@ -152,11 +182,60 @@
 					<section>
 						<h2>Break!</h2>
 						<iframe src="https://openprocessing.org/sketch/1501927/embed/" width="800" height="600"></iframe>
-						
 					</section>
-
 					<section>
-						Events and inputs
+						<h2>Interactivity</h2>
+						<iframe src="https://openprocessing.org/sketch/107042/embed/" width="500" height="450"></iframe>
+					</section>
+					<section>
+						<section>
+							<h3>Working with Color</h3>
+							Or: how to avoid clown barf
+						</section>
+						<section><h3>Subtractive Color</h3>
+							<img src="./images/subtractive_color.jpg" />
+						</section>
+						<section><h3>Additive Color</h3>
+							<img src="./images/additive_color.jpg" />
+						</section>
+						<section>
+							<img src="./images/color_wheel.jpg" />
+						</section>
+						<section><h3>RGB, HSL, and HSB</h3>
+							RGB Color Mixing: <a href="https://openprocessing.org/sketch/387993/">demo</a><br>
+							HSB vs HSL<br> <iframe src="https://editor.p5js.org/enickles/full/Yig1zl6EK" width="642" height="402"></iframe>
+						</section>
+						<section>
+							<h3>Color relativity</h3>
+							<div class="r-stack">
+								<img class="fragment fade-in-then-out" data-fragment-index="0" src="https://www.washingtonpost.com/blogs/wonkblog/files/2015/02/800px-Gradient-optical-illusion.svg_.png">
+								<img class="fragment fade-in-then-out" data-fragment-index="1" src="https://images2.minutemediacdn.com/image/upload/c_fit,f_auto,fl_lossy,q_auto,w_728/v1555924860/shape/mentalfloss/image001.gif?itok=PSCsy2wd">
+								<img class="fragment fade-in-then-out" data-fragment-index="2" src="https://images2.minutemediacdn.com/image/upload/c_fit,f_auto,fl_lossy,q_auto,w_728/v1555924860/shape/mentalfloss/image003_1.jpg?itok=3GLG3dVQ">
+								<img class="fragment fade-in-then-out" data-fragment-index="3" src="https://www.washingtonpost.com/blogs/wonkblog/files/2015/02/dress_color.png">
+							</div>
+						</section>
+					</section>
+					<section>
+						<h3>Beyond canvas(): P5Graphics</h3>
+						<p>off-screen graphics buffer, can be used for "layering" images</p>
+					</section>
+					<section>
+						<h3>Creating Textures</h3>
+					</section>
+					<section>
+						<h3>Faking shadows</h3>
+					</section>
+					<section>
+						<h3>Rendering images for print and web</h3>
+					</section>
+					<section>
+						<h3>Bringing in other libraries, APIs</h3>
+						<section><h3>Color scheme APIs</h3></section>
+
+					</section>
+					<section>
+						<h3>HTML5 CanvasRenderingContext2D</h3>
+						https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D
 					</section>
 				</div>
 		</div>
