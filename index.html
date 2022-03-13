@@ -42,6 +42,42 @@
 					Abstract vs Figurative
 				</section>
 				<section>
+							<div style="float:left">
+							<h3>Tools</h3>
+							<small>
+							<ul>
+							<li class="fragment" data-fragment-index="1">lines</li>
+							<li class="fragment" data-fragment-index="3">curves</li>
+							<li class="fragment" data-fragment-index="5">shapes</li>
+							<li class="fragment" data-fragment-index="7">colors</li>
+						
+						</ul>
+						</small>
+							<h3>Techniques</h3>
+							<small>
+								<ul>
+							<li class="fragment" data-fragment-index="2">Tiling</li>
+							<li class="fragment" data-fragment-index="4">Displacement</li>
+							<li class="fragment" data-fragment-index="6">Recursion</li>
+						</small>
+					</ul>
+				</div>
+				<div class="r-stack">
+					<img class="fragment" style="width:50%" data-fragment-index="1" src="images/line.png">
+					<img class="fragment" style="width:50%" data-fragment-index="2" src="images/repetition.png">
+					<img class="fragment" style="width:50%" data-fragment-index="3" src="images/curve.png">
+							<img class="fragment" style="width:50%" data-fragment-index="4" src="images/displacement2.png">
+					<img class="fragment" style="width:50%" data-fragment-index="6" src="images/recursion.png">
+										<img class="fragment" style="width:50%" data-fragment-index="7" src="images/color.png">
+
+				</div>
+							<p style="clear:both;"><small><a href="https://youtu.be/4Se0_w0ISYk">Tim Holman - Generative Art Speedrun</a></small></p>
+						</section>
+				<section>
+					<h3>Hand drawn exercise</h3>
+					<p>Choose 6 different ways to fill in a square. Roll a die and fill in a 10 x 10 grid with the corresponding shape.</p>
+				</section>
+				<section>
 					<h3>Development Environment</h3>
 					<p>https://editor.p5js.org</p>
 
@@ -104,6 +140,7 @@
 						<h3>The coordinate plane</h3>
 						<img data-src="https://p5js.org/assets/learn/coordinate-system-and-shapes/images/drawing-03.svg">
 					</section>
+
 					<section>
 						<h3>Points, Lines, and Circles</h3>
 						<pre><code>
@@ -189,8 +226,7 @@
 					</section>
 					<section>
 						<section>
-							<h3>Working with Color</h3>
-							Or: how to avoid clown barf
+							<h3>Color Theory</h3>
 						</section>
 						<section><h3>Subtractive Color</h3>
 							<img src="./images/subtractive_color.jpg" />
@@ -216,27 +252,49 @@
 						</section>
 					</section>
 					<section>
-						<h3>Beyond canvas(): P5Graphics</h3>
-						<p>off-screen graphics buffer, can be used for "layering" images</p>
-					</section>
-					<section>
-						<h3>Creating Textures</h3>
-					</section>
-					<section>
-						<h3>Faking shadows</h3>
-					</section>
-					<section>
-						<h3>Rendering images for print and web</h3>
-					</section>
-					<section>
-						<h3>Bringing in other libraries, APIs</h3>
-						<section><h3>Color scheme APIs</h3></section>
+						<h3>Working with Color</h3>
+						<small>or: how to avoid clown barf</small>
+						<ul>
+							<li>Use predefined color palettes</li>
+							<li>lerpColor()</li>
+						</ul>
 
 					</section>
 					<section>
-						<h3>HTML5 CanvasRenderingContext2D</h3>
-						https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D
+						<h3>Beyond canvas(): P5Graphics</h3>
+						<p>off-screen graphics buffer, can be used for "layering" images</p>
+						<p><a href="https://p5js.org/examples/structure-create-graphics.html">example</a></p>
+
 					</section>
+					<section>
+						<h3>Creating Textures</h3>
+						<a href="https://openprocessing.org/sketch/1468816">Imported texture</a><br>
+						<a href="https://openprocessing.org/sketch/1461430">On the fly texture</a>
+					</section>
+					<section>
+						<h3>Fake shadows, HTML5 shadows</h3>
+						<h4><a href="https://openprocessing.org/sketch/1468816">Fake Shadows</a></h4>
+						<h4><a href="https://openprocessing.org/sketch/918536">HTML5 Shadows</a></h4>
+						<p>HTML5 CanvasRenderingContext2D</p>
+						<a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D">docs</a>
+					</section>
+					<section>
+						<h3>Rendering images for print and web</h3>
+						<ul>
+							<li>Decide on a target resoltuion for print</li>
+							<li>use createGraphics() to generate work at that resolution</li>
+							<li>use image() to scale and display the work</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Bringing in other libraries, APIs</h3>
+						<ul>
+							<li>jQuery, etc</li>
+							<li>Color scheme APIs</li>
+						</ul>
+
+
+
 				</div>
 		</div>
 
